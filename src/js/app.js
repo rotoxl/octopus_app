@@ -498,9 +498,6 @@ function Controlador(){
 
 	if (isPhone() ){
 		this.config.servidor='http://app.octopusapp.es/'
-		// this.config.servidor='http://87.98.228.120/octopusapp/'
-		// this.config.servidor='http://www.octopusapp.es/app/'
-		// this.config.servidor='http://192.168.0.196:8888/octopus/'
 		}
 	else
 		this.config.servidor='./'
