@@ -3,6 +3,8 @@
 This is the repository of the app ([project info] (http://www.octopusapp.es)), built for Android and iOS, and based on [Cordova] (https://cordova.apache.org/) & [materializecss.com](http://materializecss.com/). 
 
 [![Free download /Android](https://raw.githubusercontent.com/rotoxl/octopus_app/master/screenshots/shop-android.png)](https://www.google.com/url?q=https://play.google.com/store/apps/details?id%3Des.octopusapp.clo&sa=D&ust=1498201723241000&usg=AFQjCNF_EGJsoy7ekebtyKi-0o_3hSlgjQ) [![Free download /iOS](https://raw.githubusercontent.com/rotoxl/octopus_app/master/screenshots/shop-ios.png)](https://www.google.com/url?q=https://itunes.apple.com/es/app/octopus-test-oposiciones-y/id1027449575?l%3Des%26ls%3D1%26mt&sa=D&ust=1498201723243000&usg=AFQjCNG34Ax4d7S9j6kvcFrzdokFeG9Cfw)
+
+![Screenshots](https://raw.githubusercontent.com/rotoxl/octopus_app/master/screenshots/comp.png "Screenshots")
     
 It has been reviewed in the following digital media:
 
@@ -13,7 +15,7 @@ It has been reviewed in the following digital media:
 * [Formación y estudios](http://www.formacionyestudios.com/3-aplicaciones-moviles-te-ayudaran-oposicion.html&sa=D&ust=1498201723245000&usg=AFQjCNGBy2Q-fATBIyPRNJX0Upo4hCPPdQ)
 * [El Androide Libre](http://www.elandroidelibre.com/2016/02/aplicaciones-para-examenes-oficiales-y-oposiciones.html&sa=D&ust=1498201723244000&usg=AFQjCNFeLmc3VYWVkwSCSqvCIcVBZSeeBQ)
 * [Moviles Celular](http://www.movilescelular.com/aplicaciones-para-examenes-oficiales-y-oposiciones/&sa=D&ust=1498201723244000&usg=AFQjCNEl6q80dEwFLj6qOOAHc9xtDpZ5Ig)
-* [Phonegap Spain] (https://t.co/b5DPrFo433&sa=D&ust=1498201723243000&usg=AFQjCNFU4RW4tYyH7Oun0kXe4nVtecXMzQ)
+* [Phonegap Spain](https://t.co/b5DPrFo433&sa=D&ust=1498201723243000&usg=AFQjCNFU4RW4tYyH7Oun0kXe4nVtecXMzQ)
 
 Out of the box it's able to:
 
