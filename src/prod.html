@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es" class="app">
+<head>
+  	<meta charset="utf-8" />
+
+  	<meta name="author" content="Carrón Sisters"/>
+  	<meta name="theme-color" content="#25313e">
+
+  	<meta name="description" content="octopusapp.es, test, oposiciones, certificaciones, app, web app" />
+  	<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0, height=device-height, width=device-width" />
+  	<meta content="320" name="MobileOptimized">
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+
+
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' *"> -->
+
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/; media-src *; img-src *; connect-src https://s3-eu-west-1.amazonaws.com 'self' http://189.89.248.141:8888 http://localhost:8888 http://*.octopusapp.es; font-src *">
+
+<!-- 
+	<title>octopusApp.es | Test de oposiciones, certificaciones y más</title>
+	<link href="images/icon144.png" sizes="144x144"  rel="apple-touch-icon-precomposed">
+    <link href="images/icon114.png" sizes="114x114"  rel="apple-touch-icon-precomposed">
+    <link href="images/icon72.png"  sizes="72x72"  	rel="apple-touch-icon-precomposed">
+    <link href="images/icon57.png"  sizes="57x57"  	rel="apple-touch-icon-precomposed">
+    <link href="images/icon57.png"  rel="shortcut icon"> 
+-->
+
+	<!-- <link rel="stylesheet" href="css/bootstrap.css" type="text/css" /> -->
+	<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+
+	<link rel="stylesheet" href="css/swiper.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/app.css" type="text/css" />
+  <link rel="stylesheet" href="css/progress.css" type="text/css" />
+	<link rel="stylesheet" href="css/iphone-style-checkboxes.css" type="text/css" />
+
+	<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+	<script src="../cordova.js"></script>
+</head>
+<body class="">
+	<div class="navbar-fixed">
+		<ul id="nav-dropdown" class="dropdown-content"></ul>
+	  	<nav id="navigation_bar">
+	  		
+	  		<div class="nav-wrapper main noback">
+	            <a class="brand-logo center page-title"></a>
+
+	            <a data-activates="navDrawer" class="button-collapse btn-navdrawer">
+					<i class="mdx">menu</i>
+				</a>
+
+				<a class="button-collapse btn-backbutton" onclick="app.backButton()">
+					<i class="material-icons">&#xE5C4;</i>
+				</a>
+
+				<a class="button-collapse btn-search right" onclick="app.search()">
+					<i class="mdx">search</i>
+				</a>
+			</div>
+	  	</nav>
+
+	  	<nav id="navigation_bar_secondary" style="display:none">
+	  		<div class="nav-wrapper">
+	        <a href="javascript:app.backButton()" class="button-collapse">
+					<i class="material-icons">&#xE5C4;</i>
+					<a class="page-title"></a>
+				</a>
+			</div>
+	  	</nav>
+	</div>
+	
+  	<ul id="navDrawer" class="side-nav fixed right" style="opacity:0">
+  		<li class="logo">
+  			<a class="btnCerrarNav btn-collapse" onclick="app.cierraNavDrawer()">
+  				<i class="mdx">close</i>
+  			</a>
+  		</li>
+
+  		<li class="separator"></li>
+
+		<li class="liVistaMisTest"> 		<a href="javascript:app.cargaVistaMisTest()"> 	  		<i class="material-icons">&#xE0D6;</i>			<b class="bg-danger"></b>	<span>Mis Test</span> 		</a> </li>
+		<li class="liVistaTienda"> 			<a href="javascript:app.cargaVistaTienda(false)"> 		<i class="material-icons">&#xE8CC;</i>	<b class="bg-warning"></b>  <span>Tienda de Test</span> </a> </li>
+			
+		<!-- <li class="liVistaEstadisticas"> 	<a href="javascript:app.cargaVistaEstadisticas()">  	<<i class="material-icons">&#xE8E5;</i>		<b class="bg-info"></b> 	<span>Estadísticas</span> 	</a> </li> -->
+	
+		<!-- <li class="separator"></li> -->
+					
+		<!-- <li class="liVistaTablaPuntuacion"> <a href="javascript:app.cargaVistaTablaPuntuacion()"> 	<i class="material-icons">&#xE03F;</i>		<b class="bg-success"></b> 	<span>Tabla de puntuaciones</span> </a> </li> -->
+
+		<!-- <li class="liVistaMedallero">		<a href="javascript:app.cargaVistaMedallero()"> 		<i class="mdx">gamepad</i>		<b class="bg-info"></b> 	<span>Logros</span> </a> </li> -->
+
+		<li class="liVistaUploadTest hidden"><a href="javascript:app.cargaVistaMigraTest()"> 		<i class="material-icons">&#xE2C3;</i>	<b class="bg-danger"></b> 	<span>Subir test</span> </a> </li>
+
+		<li class="separator"></li>
+
+		<li class="liVistaAjustes">
+    		<a href="javascript:app.cargaVistaAjustes()">
+    			<i class="mdx">settings</i> Ajustes
+    		</a>
+    	</li>
+    	<li>
+    		<a href="javascript:app.lanzaTourAplicacion()" class="tour">
+    			<i class="material-icons">&#xE8EB;</i> Guía del producto
+    		</a>
+    	</li>
+
+  	</ul> 
+
+  	<div id="content">
+      <section class="vista empty">
+        <div class="vista-body flowable">
+        </div>
+      </section>
+  	</div>
+
+  	<div id="frmImgAmpliada" class="modal modal-fixed-footer" onclick="app.vistaActiva.cerrarAmpliarImg()">
+  		<div class="modal-content">
+			<img src="" style="width:100%;">
+		  </div>
+  		<div class="modal-footer">
+  			<a class="modal-action btn-flat left" onclick="app.vistaActiva.abrirNavegadorExterno()">Nueva ventana</a>
+  			<a class="modal-action modal-close btn-flat">Cerrar</a>
+  		</div>
+  	</div>
+    
+    <div id="frmVistaFlotante" class="modal">
+    </div>
+
+  	<div class="throbber progress">
+  		<div class="indeterminate"></div>
+  	</div>
+
+  	<div class="modal bottom-sheet" id="frmPausa">
+  		<div class="modal-content pausa">
+  			<h4>Test pausado</h4>
+
+  			<ul class="collection col-pausa">
+  				<li class="collection-item avatar soloTitulo" onclick="app.vistaActiva.btnFrmPausa_Play()">
+  					<i class="mdx circle">&#xE037;</i>
+  					<span class="title">Continuar</span>
+  				</li>
+  				<li class="collection-item avatar" onclick="app.vistaActiva.btnFrmPausa_Pausa()">
+  					<i class="mdx circle">pause</i>
+  					<span class="title">Pausar y salir</span>
+  					<p class="small">Podrás continuar en otro momento en donde lo dejaste</p>
+  				</li>
+  				<li class="collection-item avatar conBorde" onclick="app.vistaActiva.btnFrmPausa_Stop()">
+  					<i class="mdx circle">stop</i>
+  					<span class="title">Finalizar</span>
+  					<p class="small">Para ver tu nota y las estadísticas</p>
+  				</li>
+
+  				<li class="collection-item avatar" onclick="app.vistaActiva.informarErrorPregunta()">
+  					<i class="mdx circle">warning</i>
+  					<span class="title">Señalar un error</span>
+  					<p class="small">La pregunta contiene errores o erratas</p>
+  				</li>
+
+  			</ul>
+
+  		</div>
+
+      <div class="modal-content error">
+        <h4>Señala el tipo de error</h4>
+        
+        <ul class="collection">
+          <li class="collection-item avatar soloTitulo" onclick="app.vistaActiva.btnContinuarTest()">
+            <i class="mdx circle">close</i>
+            <span class="title">Cancelar</span>
+          </li>
+
+          <li class="collection-item avatar mini" onclick="app.vistaActiva.btnInformarErrorPregunta('ortografía')">
+            <i class="mdx circle">&#xE167;</i>
+            <span class="title">Ortografía o erratas</span>
+          </li>
+          <li class="collection-item avatar mini" onclick="app.vistaActiva.btnInformarErrorPregunta('mala-redacción')">
+            <i class="mdx circle">help</i>
+            <span class="title">Redacción confusa</span>
+          </li>
+
+          <li class="collection-item avatar mini" onclick="app.vistaActiva.btnInformarErrorPregunta('resp-incorrecta')">
+            <i class="mdx circle">shuffle</i>
+            <span class="title">Respuesta incorrecta</span>
+          </li>
+          <li class="collection-item avatar mini" onclick="app.vistaActiva.btnInformarErrorPregunta('falta-imagen')">
+            <i class="mdx circle">&#xE412;</i>
+            <span class="title">Faltan imágenes o recursos</span>
+          </li>
+
+          <li class="collection-item avatar mini" onclick="app.vistaActiva.btnInformarErrorPregunta('otros')">
+            <i class="mdx circle">&#xE86B;</i>
+            <span class="title">Otros</span>
+          </li>
+
+        </ul>
+      </div>
+
+  	</div>
+
+  	<div class="modal bottom-sheet" id="frmContinuarTest">
+  		<div class="modal-content">
+  			<h5 class="testAMedias">Test a medias, ¿continuar o empezar de nuevo?</h4>
+  			<h5 class="testTerminado">Test terminado ¿empezar de nuevo?</h4>
+  			
+  			<ul class="collection">
+  				<li class="collection-item avatar testTerminado" onclick="app.vistaActiva.btnLanzaTest_desdeCero()">
+  					<i class="mdx circle">replay</i>
+  					<span class="title">Empezar de nuevo</span>
+  					<p class="small">Se perderán estadísticas</p>
+  				</li>
+  				
+
+  				<li class="collection-item avatar testAMedias soloTitulo" onclick="app.vistaActiva.btnLanzaTest_continuar()">
+  					<i class="mdx circle">&#xE037;</i>
+  					<span class="title">Continuar</span>
+  				</li>
+
+  				<li class="collection-item avatar testAMedias" onclick="app.vistaActiva.btnLanzaTest_desdeCero()">
+  					<i class="mdx circle">replay</i>
+  					<span class="title">Empezar de nuevo</span>
+  					<p class="small">Se perderá el progreso que lleves</p>
+  				</li>
+  			</ul>
+  		</div>
+  	</div>
+
+  	<div class="modal bottom-sheet" id="frmTiempoTerminado">
+  		<div class="modal-content">
+  			<h5>Se ha terminado el tiempo</h4>
+  			
+  			<ul class="collection">
+  				<li class="collection-item avatar" onclick="app.vistaActiva.btnFrmPausa_Stop()">
+  					<i class="mdx circle">stop</i>
+  					<span class="title">Finalizar</span>
+  					<p class="small">Calcular nota y estadísticas</p>
+  				</li>
+  			</ul>
+  		</div>
+  	</div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/materialize.js"></script>
+
+	<!-- App -->
+  <script src="js/app.js"></script> 
+	<!-- <script src="data/data.min.js"></script>  -->
+	<!-- <script src="js/swipeview.js"></script> //-->
+	 <script src="js/swiper.jquery.min.js"></script>
+	
+	<script src="js/options.nosvn.js"></script>
+  <script src="js/fastclick.js"></script>
+  <script src="js/progress.js"></script>
+  <script src="js/iphone-style-checkboxes.js"></script>
+  <script src="js/fuse.min.js"></script>
+	<!-- <script src="js/data.min.js"></script> -->
+  
+	
+	<!--
+	<script src="js/counterUp.min.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	//-->
+	
+	<!--
+	<script src="js/flot/jquery.flot.min.js"></script>
+	<script src="js/flot/jquery.flot.tooltip.min.js"></script>
+	<script src="js/flot/jquery.flot.resize.js"></script>
+	<script src="js/flot/jquery.flot.grow.js"></script>
+	//-->
+	<!-- <script src="https://apis.google.com/js/client.js?onload=gapiInit"></script> //-->
+
+	<script>
+		function init(){
+			if (isPhone()){
+				jQuery('body').addClass('cordova')
+				}
+
+			app=new Controlador()
+			app.init()
+		}
+		
+		if (isPhone())
+          	document.addEventListener('deviceready', function(){init()}, true)
+      	else
+          	jQuery(document).ready(function(){init()} )
+	</script>
+</body>
+</html>
