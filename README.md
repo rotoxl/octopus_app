@@ -28,6 +28,51 @@ Out of the box it's able to:
 * [Crosswalk](https://github.com/crosswalk-project/cordova-plugin-crosswalk-webview)
 * [Content syncing](https://github.com/phonegap/phonegap-plugin-contentsync)
 
-It also has a REST backend (PHP & MySQL) and a res repo (Amazon S3)
+## Deploy
+### As webapp
+`src` folder is ready to be uploaded to a PHP+MySQL server. You just need to:
+
+* create database (scripts located in `database` folder)
+* configure database access at `src/paramBD.nosvn.php`
+* configure absolute path at `app.js` (relative path is not recomended beacause its also meant to be built as app)
+
+### As cordova app
+
+```
+cordova create es.myawesomeapp.app
+cd es.myawesomeapp.app
+
+rm -rf www/*
+rsync -a -c ../src www 
+
+cordova plugin add cordova-plugin-device
+
+cordova platform add android
+
+cordova plugin add cordova-plugin-inappbrowser
+cordova plugin add cordova-plugin-dialogs
+cordova plugin add cordova-plugin-network-information
+
+cordova plugin add https://github.com/EddyVerbruggen/cordova-plugin-actionsheet.git
+cordova plugin add https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git
+
+cordova plugin add https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git
+
+cordova plugin add https://github.com/j3k0/cordova-plugin-purchase  --variable BILLING_KEY="** secret **"
+
+cordova plugin add https://github.com/ptgamr/cordova-google-play-game.git --variable APP_ID=secret
+
+cordova plugin add cordova-plugin-whitelist
+cordova plugin add https://github.com/danwilson/google-analytics-plugin.git
+
+cordova plugin add cordova-plugin-crosswalk-webview
+
+cordova plugin add https://github.com/EddyVerbruggen/LaunchMyApp-PhoneGap-Plugin.git --variable URL_SCHEME=esoctopusapp
+
+echo "¡Terminado! Recuerda añadir a AndroidManifest las líneas necesarias para la customURL (+info en config.xml)" 
+
+```
+
+
 
 
