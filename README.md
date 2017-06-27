@@ -2,9 +2,9 @@
 
 ![Screenshots](https://raw.githubusercontent.com/rotoxl/octopus_app/master/screenshots/comp.png "Screenshots")
 
-This is the repository of the app ([project info] (http://www.octopusapp.es)), built for Android and iOS, and based on [Cordova] (https://cordova.apache.org/) & [materializecss.com](http://materializecss.com/). 
+This is the repository of the app, built for Android and iOS, and based on [Cordova] (https://cordova.apache.org/) & [materializecss.com](http://materializecss.com/). 
 
-[![Free download /Android](https://raw.githubusercontent.com/rotoxl/octopus_app/master/screenshots/shop-android.png)](https://www.google.com/url?q=https://play.google.com/store/apps/details?id%3Des.octopusapp.clo&sa=D&ust=1498201723241000&usg=AFQjCNF_EGJsoy7ekebtyKi-0o_3hSlgjQ) [![Free download /iOS](https://raw.githubusercontent.com/rotoxl/octopus_app/master/screenshots/shop-ios.png)](https://www.google.com/url?q=https://itunes.apple.com/es/app/octopus-test-oposiciones-y/id1027449575?l%3Des%26ls%3D1%26mt&sa=D&ust=1498201723243000&usg=AFQjCNG34Ax4d7S9j6kvcFrzdokFeG9Cfw)
+[![Demo](https://raw.githubusercontent.com/rotoxl/octopus_app/master/screenshots/shop-browser.png)](http://app.octopusapp.es/prod.html) [![Free download /Android](https://raw.githubusercontent.com/rotoxl/octopus_app/master/screenshots/shop-android.png)](https://play.google.com/store/apps/details?id%3Des.octopusapp.clo&sa=D&ust=1498201723241000&usg=AFQjCNF_EGJsoy7ekebtyKi-0o_3hSlgjQ) [![Free download /iOS](https://raw.githubusercontent.com/rotoxl/octopus_app/master/screenshots/shop-ios.png)](https://itunes.apple.com/es/app/octopus-test-oposiciones-y/id1027449575?l%3Des%26ls%3D1%26mt&sa=D&ust=1498201723243000&usg=AFQjCNG34Ax4d7S9j6kvcFrzdokFeG9Cfw)
     
 It has been reviewed in the following digital media:
 
